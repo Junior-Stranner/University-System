@@ -35,8 +35,7 @@ public class TelaProfessor {
 		
 	//	System.out.println("Média : "+media);
 		
-  
-	}
+
   public static int menuCadastroAluno() {
 	  System.out.println("\n Cadastro Aluno \n"
 	  		+ "\n 1 - Novo Professor"
