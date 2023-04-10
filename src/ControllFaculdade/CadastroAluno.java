@@ -36,7 +36,7 @@ public class CadastroAluno {
 
 			aluno.setMedia(( aluno.getNota1()+ aluno.getNota2() + aluno.getNota3())/3); 
 
-			if(aluno.getMedia()>= 6) {
+			if(aluno.getMedia()>= 7) {
 				aluno.setConselho( "Aprovado") ;
 			}else {
 				aluno.setConselho("Reprovado");		
@@ -49,7 +49,37 @@ public class CadastroAluno {
 		System.out.println("\n Digite as opcões a seraletrada "
 				+ "\n 1 - Alterar nota 1"
 				+ "\n 2 - Alterar nota 2"
-				+ "\n 3 - Alterar nota 3");
+				+ "\n 3 - Alterar nota 3"
+				+ "\n 4 - Alterar Curso");
+       int alt = Integer.parseInt(in.nextLine());
+
+	   for (Aluno aluno : alunos) {
+
+	   switch(alt){
+
+		case 1:System.out.println("Digite nova nota 1");
+		double nvNota1 = Double.parseDouble(in.nextLine());
+
+		aluno.setNota1(nvNota1);
+
+		case 2:System.out.println("Digite nova nota 2");
+		double nvNota2 = Double.parseDouble(in.nextLine());
+
+		aluno.setNota1(nvNota2);
+
+		case 3:System.out.println("Digite nova nota 3");
+		double nvNota3 = Double.parseDouble(in.nextLine());
+
+		aluno.setNota1(nvNota3);
+
+		case 4:System.out.println("Digite novo Curso");
+		String nvCurso = in.nextLine();
+
+		aluno.setCurso(nvCurso);
+	   }
+
+	   }
+
 	}
 
 	private static void excluirAluno() {
@@ -59,7 +89,7 @@ public class CadastroAluno {
 
 		for (Aluno aluno : alunos) {
 			if(aluno.getMatricula() == nvaMatricula) {
-				System.out.println("\n Aluno Excluído");
+				System.out.println("\n Aluno "+aluno.getNome()+" Excluído");
 
 				alunos.remove(aluno);
 			}	
@@ -78,8 +108,8 @@ public class CadastroAluno {
 						+ "\n Aluno : "+aluno.getNome());
 			}else 
 				System.out.println("Aluno não existe !!");
-		}
-
+		
+	}
 	}
 
 	private static void listaAluno() {

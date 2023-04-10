@@ -11,6 +11,16 @@ public class Funcionario extends Aluno{
 		this.cargo = cargo;
 	}
 
+ public String mostraFuncionario(){
+	
+	return "\n Funcionário \n"
+	+"\n id = "+getId()
+	+"\n Nome = "+getNome()
+	+"\n Idade = "+getIdade()
+	+"\n Cargo = "+getCargo();
+
+ } 
+ 
 
 	public Funcionario() {
 		super();

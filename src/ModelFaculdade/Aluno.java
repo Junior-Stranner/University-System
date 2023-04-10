@@ -11,14 +11,15 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "\n Aluno \n matricula=" + matricula 
+		return "\n Aluno" 
+		        + "\n matricula=" + matricula 
 				+ "\n idade " + idade 
 				+ "\n nome " + nome 
 				+ "\n curso " + curso 
 				+ "\n nota1 " +nota1 
 				+ "\n nota2 " + nota2 
 				+ "\n nota3 " + nota3
-				+ "\n \n media " +media
+				+ "\n media " +media
 				+ "\n Conselho "+conselho;
 	}
 	public Aluno() {

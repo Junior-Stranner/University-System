@@ -1,13 +1,15 @@
 package ModelFaculdade;
 
 public class Professor extends Aluno{
-	private String  aExperiencia;
+	private int id;
+	private String  experiencia;
 	
 
 	
-	public Professor( String aExperiencia) {
+	public Professor(int id, String aExperiencia) {
 		super();
-		this.aExperiencia = aExperiencia;
+		this.id = id;
+		this.experiencia = aExperiencia;
 	}
 
 	public Professor() {
@@ -17,12 +19,25 @@ public class Professor extends Aluno{
 
 	
 
+	@Override
+	public String toString() {
+		return "Professor [id=" + id + ", aExperiencia=" + experiencia + "]";
+	}
+
 	public String getaExperiencia() {
-		return aExperiencia;
+		return experiencia;
 	}
 
 	public void setaExperiencia(String aExperiencia) {
-		this.aExperiencia = aExperiencia;
+		this.experiencia = aExperiencia;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	
