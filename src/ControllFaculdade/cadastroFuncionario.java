@@ -11,21 +11,23 @@ public class CadastroFuncionario {
 
 	private static final int TelaFuncionar = 0;
 	static Scanner in = new Scanner(System.in);
-	static ArrayList<Funcionario> funcs = new ArrayList <Funcionario>();
+	
 	
 	public static void cadastroFuncionario(){
 		
+		ArrayList<Funcionario> funcs = new ArrayList <Funcionario>();
 				int op =0;
 
 		do {
 			op = TelaFuncionario.menuFuncionario();
 
 			switch(op){
-			case 1:novoFuncionqario();break;
-			case 2:listaFuncionario();break;
-			case 3:pesquisarFuncionario();break;
-			case 4:excluirFuncionario();break;
-			case 5:alteraDadosFuncionario();break;
+			case 1:novoFuncionqario(funcs);break;
+			case 2:calcularSalario(funcs);break;
+			case 3:listaFuncionario(funcs);break;
+			case 4:pesquisarFuncionario(funcs);break;
+			case 5:excluirFuncionario(funcs);break;
+			case 6:alteraDadosFuncionario(funcs);break;
 			case 9:System.out.println("Finalizar Sistema !!");
 
 			}
@@ -34,7 +36,17 @@ public class CadastroFuncionario {
 
 	}
 
-	private static void alteraDadosFuncionario() {
+	private static float calcularSalario(ArrayList<Funcionario> funcs ) {
+
+		float salario = 0;
+		for (Funcionario funcionario : funcs) {
+            
+		     salario = (funcionario.getSalPorHora() * funcionario.getHorasTrabalhadas());
+		}
+		return  salario;
+	}
+
+	private static void alteraDadosFuncionario(ArrayList<Funcionario> funcs ) {
 
 		System.out.println("\n Alterta Dados "
 		+"\n 1 - Altera Id"
@@ -54,7 +66,7 @@ public class CadastroFuncionario {
 
 	}
 
-	private static void excluirFuncionario() {
+	private static void excluirFuncionario(ArrayList<Funcionario> funcs ) {
 
 		System.out.println("Digite o id do Funcionario");
 		int  id = Integer.parseInt(in.nextLine());
@@ -69,7 +81,7 @@ public class CadastroFuncionario {
 		}
 	}
 
-	private static void pesquisarFuncionario() {
+	private static void pesquisarFuncionario(ArrayList<Funcionario> funcs ) {
 
 		System.out.println("Digite o id do Funcionario");
 		int  id = Integer.parseInt(in.nextLine());
@@ -84,7 +96,7 @@ public class CadastroFuncionario {
 	}
 
 
-	private static void listaFuncionario(  ) {
+	private static void listaFuncionario( ArrayList<Funcionario> funcs  ) {
         
      for (Funcionario funcionario : funcs) {
         
@@ -93,11 +105,13 @@ public class CadastroFuncionario {
         +"\n Nome : "+funcionario.getNome()
         +"\n Idade : "+funcionario.getIdade()
         +"\n Cargo : "+funcionario.getCargo()
-        +"\n ");
+        +"\n Salário por hora : "+funcionario.getSalPorHora()
+		+"\n Horas Trabalhadas : "+funcionario.getHorasTrabalhadas()
+		+"\n Sálario do Funcionario : "+calcularSalario(funcs));
      }
 	}
 
-	private static void novoFuncionqario() {
+	private static void novoFuncionqario(ArrayList<Funcionario> funcs) {
      Funcionario funcionario = new Funcionario();
      TelaFuncionario.lerDadosFuncionario(funcionario);
 

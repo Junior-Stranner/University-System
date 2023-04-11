@@ -24,10 +24,18 @@ public class TelaFuncionario {
         System.out.println("Cargo do Funcionario");
         String cargo  = in.nextLine();
 
+        System.out.println("Salário por Hora");
+        float salPorHora  = Float.parseFloat(in.nextLine());
+
+        System.out.println("Horas Trabalhadas");
+        float horasTrabalhadas  = Float.parseFloat(in.nextLine());
+
         func.setId(id);
         func.setNome(nome);
         func.setIdade(idade);
         func.setCargo(cargo);
+        func.setSalPorHora(salPorHora);
+        func.setHorasTrabalhadas(horasTrabalhadas);
 
         
     }
@@ -36,11 +44,12 @@ public class TelaFuncionario {
 
         System.out.println("Menu Funcionario" 
         +"\n 1 - Novo Funcionário"
-        +"\n 2 - Lista Funcionário"
-        +"\n 3 - Pesquisa Funcionario"
-        +"\n 4 - Exclui Funcionário"
-        +"\n 5 - Altera Dados" 
-        +"\n 6 - Finaliza Sistema!!");
+        +"\n 2 - calcularSalario"
+        +"\n 3 - Lista Funcionário"
+        +"\n 4 - Pesquisa Funcionario"
+        +"\n 5 - Exclui Funcionário"
+        +"\n 6 - Altera Dados"
+        +"\n 9 - Finaliza Sistema!!");
         return lerInt.nextInt();
     }
 
