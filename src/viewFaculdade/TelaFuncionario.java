@@ -49,7 +49,7 @@ public class TelaFuncionario {
         +"\n 4 - Pesquisa Funcionario"
         +"\n 5 - Exclui Funcionário"
         +"\n 6 - Altera Dados"
-        +"\n 9 - Finaliza Sistema!!");
+        +"\n 9 - Voltar ");
         return lerInt.nextInt();
     }
 

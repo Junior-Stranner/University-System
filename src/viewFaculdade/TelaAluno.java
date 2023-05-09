@@ -55,7 +55,7 @@ public class TelaAluno {
 	  		+ "\n 4 - Pesquisar Aluno"
 	  		+ "\n 5 - exclui Aluno"
 	  		+ "\n 6 - Altera Dados Aluno"
-	  		+ "\n 9 - cancelar!!!");
+	  		+ "\n 9 - Voltar"); 
 	return lerInt.nextInt();
 	  
 }

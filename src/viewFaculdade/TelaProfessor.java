@@ -43,7 +43,7 @@ public class TelaProfessor {
 	  		+ "\n 3 - Pesquisar Professor"
 	  		+ "\n 4 - exclui Professor"
 	  		+ "\n 5 - Altera Dados Professor"
-	  		+ "\n 9 - cancelar!!!");
+	  		+ "\n 9 - Voltar ");
 	return lerInt.nextInt();
 	  
 }  
