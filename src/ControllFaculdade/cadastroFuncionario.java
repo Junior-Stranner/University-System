@@ -9,7 +9,6 @@ import viewFaculdade.TelaFuncionario;
 
 public class CadastroFuncionario {
 
-	private static final int TelaFuncionar = 0;
 	static Scanner in = new Scanner(System.in);
 	
 	

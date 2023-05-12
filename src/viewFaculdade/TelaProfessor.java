@@ -12,7 +12,7 @@ public class TelaProfessor {
 	static Scanner lerInt = new Scanner(System.in);
 	
 
-	public static void lerDadosASluno(Professor professor) {
+	public static void lerDadosProfessor(Professor professor) {
 		
 		System.out.println("Id do Professor : ");
 		int id = Integer.parseInt(in.nextLine());
@@ -29,15 +29,15 @@ public class TelaProfessor {
 		professor.setId(id);
         professor.setNome(nome);
         professor.setIdade(idade);
-        professor.setaExperiencia(experiência);
+        professor.setExperiencia(experiência);
             
         }
 		
 	//	System.out.println("Média : "+media);
 		
 
-  public static int menuCadastroAluno() {
-	  System.out.println("\n Cadastro Aluno \n"
+  public static int menuCadastroProfessoro() {
+	  System.out.println("\n Cadastro Professor \n"
 	  		+ "\n 1 - Novo Professor"
 	  		+ "\n 2 - lista Professor"
 	  		+ "\n 3 - Pesquisar Professor"

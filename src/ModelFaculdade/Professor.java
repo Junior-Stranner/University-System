@@ -6,10 +6,10 @@ public class Professor extends Aluno{
 	
 
 	
-	public Professor(int id, String aExperiencia) {
+	public Professor(int id, String experiencia) {
 		super();
 		this.id = id;
-		this.experiencia = aExperiencia;
+		this.experiencia = experiencia;
 	}
 
 	public Professor() {
@@ -17,19 +17,12 @@ public class Professor extends Aluno{
 		// TODO Auto-generated constructor stub
 	}
 
-	
-
-	@Override
-	public String toString() {
-		return "Professor [id=" + id + ", aExperiencia=" + experiencia + "]";
-	}
-
-	public String getaExperiencia() {
+	public String getExperiencia() {
 		return experiencia;
 	}
 
-	public void setaExperiencia(String aExperiencia) {
-		this.experiencia = aExperiencia;
+	public void setExperiencia(String experiencia) {
+		this.experiencia = experiencia;
 	}
 
 	public int getId() {

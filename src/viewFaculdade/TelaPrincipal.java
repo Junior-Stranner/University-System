@@ -6,7 +6,7 @@ public class TelaPrincipal {
 
     static Scanner lerInt = new Scanner(System.in);
 
-    public int menuPrincipal(){
+    public static int menuPrincipal(){
     
     System.out.println("\n Cadastro"
     +"\n 1 - Aluno"
