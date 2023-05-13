@@ -12,7 +12,7 @@ public class TelaPrincipal {
     +"\n 1 - Aluno"
     +"\n 2 - Funcionario"
     +"\n 3 - Professor"
-    +"\n 4 - Sair ");
+    +"\n 4 - Finalizar Sistema ");
     return lerInt.nextInt();
 
     }

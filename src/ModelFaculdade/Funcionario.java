@@ -6,6 +6,11 @@ public class Funcionario extends Aluno{
 	 private float salPorHora;
 	 private float horasTrabalhadas;
 
+	 public double salario(){
+		return salPorHora * horasTrabalhadas;
+
+	 }
+
 	 
 	public Funcionario(int id, String cargo, float salPorHora, float horasTrabalhadas) {
 		this.id = id;

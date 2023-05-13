@@ -4,7 +4,7 @@ import viewFaculdade.TelaPrincipal;
 
 public class SistemaPrincipal {
 
-    public void sistemaPrincipal(){
+    public static void sistemaPrincipal(){
 
     int op = 0;
 
@@ -15,8 +15,8 @@ public class SistemaPrincipal {
 
             case 1:CadastroAluno.cadastroAluno();
             case 2:CadastroFuncionario.cadastroFuncionario();
-            case 3:
-            case 4:
+            case 3:CadastroProfessor.cadastroProfessor();
+            case 4:System.out.println("Finalizar Sistema");
         }
 
     }while(op != 4);    

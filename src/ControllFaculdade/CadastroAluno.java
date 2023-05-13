@@ -25,6 +25,7 @@ public class CadastroAluno {
 			case 4:pesquisarAluno();break;
 			case 5:excluirAluno();break;
 			case 6:alteraDadosAluno();break;
+			case 9:break;
 
 			}
 
@@ -90,9 +91,9 @@ public class CadastroAluno {
 		for (Aluno aluno : alunos) {
 			if(aluno.getMatricula() == nvaMatricula) {
 				System.out.println("\n Aluno "+aluno.getNome()+" Excluído");
-
+			
 				alunos.remove(aluno);
-			}	
+			}
 		}
 
 	}
